@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Download code from Git
         uses: actions/checkout@v4
+      
+      - name: Lint Bash Scritps (Code Review)
+        run: shellcheck *.sh
 
       - name: Execute Health Check Script
         run: ./health_check.sh
