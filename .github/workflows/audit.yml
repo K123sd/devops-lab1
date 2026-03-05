@@ -1,0 +1,21 @@
+name: Server Hardware Audit
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  hardware-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download code from git
+        uses: actions/checkout@v4
+
+      - name: check os
+        run: uname -a
+
+      - name: check memory
+        run: free -m
+
+      - name: check disk
+        run: df -h
