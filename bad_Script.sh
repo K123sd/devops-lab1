@@ -1,3 +1,3 @@
 #!/bin/bash
-greeting='Hello Devops'
-echo $greeting
+greeting="Hello Devops"
+echo "$greeting"
