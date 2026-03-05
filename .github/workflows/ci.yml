@@ -1,0 +1,17 @@
+name: System Health Check CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify-system:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download code from Git
+        uses: actions/checkout@v4
+
+      - name: Execute Health Check Script
+        run: ./health_check.sh
+
